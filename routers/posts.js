@@ -8,7 +8,8 @@ router.get('/', function (req, res) {
 });
 // show
 router.get('/:id', function (req, res) {
-    res.send('Dettagli del post ' + req.params.id);
+    const obj = list.find(post => post.id == req.params.id)
+    res.json(obj);
 });
 // store
 router.post('/', function (req, res) {
