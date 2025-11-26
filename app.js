@@ -4,14 +4,13 @@ const port = 3000
 const postsRouter = require('./routers/posts.js');
 
 app.get('/', (req, res) => {
-
     res.send("Server")
 })
 
 app.use('/posts', postsRouter)
 
 app.listen(port, () => {
-    console.log(`Listening on https://localhost:${port}`);
+    console.log(`Listening on http://localhost:${port}`);
 
 })
 
